@@ -1,13 +1,23 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { useRef } from "react";
+import React, { useContext, useRef } from "react";
+import {
+	NavbarColorContext,
+	NavbarContext,
+} from "../../src/components/context/NavContext";
+import TeamMember from "../components/agence/TeamMember";
 
 const Agence = () => {
 	gsap.registerPlugin(ScrollTrigger);
 
 	const imageDivRef = useRef(null);
 	const imageRef = useRef(null);
+
+	const navGreenRef = useRef(null);
+	const [navOpen, setNavOpen] = useContext(NavbarContext);
+	const [navColor, setNavColor] = useContext(NavbarColorContext);
+	const hoverImgRef = useRef(null);
 
 	const imageArray = [
 		"https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg",
@@ -75,7 +85,7 @@ const Agence = () => {
 	});
 
 	return (
-		<div className="parent ">
+		<div className="parent w-full overflow-hidden ">
 			<div id="page1" className="py-1 ">
 				<div
 					ref={imageDivRef}
@@ -138,7 +148,7 @@ const Agence = () => {
 					</div>
 				</div>
 			</div>
-			<div id="page3" className="h-screen  -mt-20 flex flex-col ">
+			<div id="page3" className="h-screen   -mt-20 flex flex-col ">
 				<div className="flex justify-center items-center h-full relative">
 					{/* name */}
 					<div className="absolute left-0 w-full overflow-hidden">
@@ -190,7 +200,41 @@ const Agence = () => {
 					</div>
 				</div>
 			</div>
-			<div className=""></div>
+			<div className="w-full">
+				<div className="mt-36 pb-10">
+					<div className="flex flex-col relative">
+						<TeamMember
+							role="Directeur principal"
+							name="Carl Gadbout"
+							image="https://k72.ca/images/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7
+"
+							setNavOpen={setNavOpen}
+						/>
+
+						<TeamMember
+							role="Conceptrice-rédactrice"
+							name="Camille Brière"
+							image="https://k72.ca/images/teamMembers/CAMILLE_640X960_2.jpg?w=640&h=960&s=28b4a95be0b5d4f2d698c8a63de0c8df
+"
+							setNavOpen={setNavOpen}
+						/>
+						<TeamMember
+							role="Directrice de création"
+							name="Chantal Gobeil"
+							image="https://k72.ca/images/teamMembers/ChantalG_640X960.jpg?w=640&h=960&s=0d5256f9a322fa37df33ebc989039be1
+"
+							setNavOpen={setNavOpen}
+						/>
+						<TeamMember
+							role="VPP et directeur général"
+							name="Pierre-Luc Paiement"
+							image="https://k72.ca/images/teamMembers/PLP2_640x960.jpg?w=640&h=960&s=277b83adbf80a1c60a1c7ee72dfdf5cf"
+							setNavOpen={setNavOpen}
+						/>
+					</div>
+				</div>
+			</div>
+			<div className="h-96"></div>
 		</div>
 	);
 };
