@@ -7,6 +7,7 @@ import {
 	NavbarContext,
 } from "../../src/components/context/NavContext";
 import TeamMember from "../components/agence/TeamMember";
+import Footer from "../components/common/Footer/Footer";
 
 const Agence = () => {
 	gsap.registerPlugin(ScrollTrigger);
@@ -200,8 +201,8 @@ const Agence = () => {
 					</div>
 				</div>
 			</div>
-			<div className="w-full">
-				<div className="mt-36 pb-10">
+			<div className="w-full mb-44">
+				<div className="mt-72 pb-10">
 					<div className="flex flex-col relative">
 						<TeamMember
 							role="Directeur principal"
@@ -231,10 +232,54 @@ const Agence = () => {
 							image="https://k72.ca/images/teamMembers/PLP2_640x960.jpg?w=640&h=960&s=277b83adbf80a1c60a1c7ee72dfdf5cf"
 							setNavOpen={setNavOpen}
 						/>
+						<TeamMember
+							role="Directrice principale"
+							name="Isabelle Beauchemin"
+							image="https://k72.ca/images/teamMembers/Isa_640X960.jpg?w=640&h=960&s=5849bb72bb04be156ba2ff4048eb65b8
+"
+							setNavOpen={setNavOpen}
+						/>
+						<TeamMember
+							role="Directeur artistique"
+							name="Olivier Duclos"
+							image="https://k72.ca/images/teamMembers/Olivier_640X960.jpg?w=640&h=960&s=9b715851e76624b3d00c6715af5c47cd
+"
+							setNavOpen={setNavOpen}
+						/>
+						<TeamMember
+							role="Directeur de création adjoint"
+							name="Sébastien Roy"
+							image="https://k72.ca/images/teamMembers/SebR_640X960.jpg?w=640&h=960&s=81dfdbd4b658503ba32862901a1ea3ca
+"
+							setNavOpen={setNavOpen}
+						/>
+						<TeamMember
+							role="Directeur artistique"
+							name="Mélanie Laviolette"
+							image="https://k72.ca/images/teamMembers/MEL_640X960.jpg?w=640&h=960&s=02d4500d30e576df52f280714e640a02
+"
+							setNavOpen={setNavOpen}
+						/>
 					</div>
 				</div>
 			</div>
-			<div className="h-96"></div>
+			<Footer />
+			{/* <div className="h-full mb-96 mt-60 relative ">
+				<h1 className="absolute font-[font2] mt-10 text-4xl z-20 w-full text-center">
+					Voir tous les projets
+				</h1>
+				<img
+					src="https://k72.ca/images/caseStudies/Opto/thumbnailimage_opto.jpg?w=1280&h=960&s=938f0bfb3de1ff2a2846b884eec2d757"
+					className="w-full rounded-tl-[72px] rounded-tr-[72px] h-[800px] object-cover"
+					alt=""
+				/>
+				<h1 className="absolute -mt-[500px] font-[font2] text-5xl z-20 w-full text-center">
+					Opto-Réseau
+				</h1>
+				<h1 className="absolute -mt-[400px] font-[font2] text-[10vh] z-20 w-full text-center hover:underline">
+					On vous voit comme personne{" "}
+				</h1>
+			</div>{" "} */}
 		</div>
 	);
 };
