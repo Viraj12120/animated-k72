@@ -138,7 +138,7 @@ const Agence = () => {
 					</div>
 				</div>
 			</div>
-			<div id="page3" className="h-screen  -mt-24 flex flex-col ">
+			<div id="page3" className="h-screen  -mt-20 flex flex-col ">
 				<div className="flex justify-center items-center h-full relative">
 					{/* name */}
 					<div className="absolute left-0 w-full overflow-hidden">
@@ -190,6 +190,7 @@ const Agence = () => {
 					</div>
 				</div>
 			</div>
+			<div className=""></div>
 		</div>
 	);
 };
