@@ -33,8 +33,8 @@ This project is fully animation-driven and serves as a hands-on playground for e
 ## 📦 Installation
 
 ```bash
-git clone <repository-url>
-cd <project-folder>
+git clone https://github.com/Viraj12120/animated-k72.git
+cd animated-k72
 npm install
 npm run dev
 ```
